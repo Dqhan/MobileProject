@@ -1,6 +1,5 @@
 <template>
 <div class="wrapper">
-    <image :src="logo" class="logo" />
     <router-view />
 </div>
 </template>

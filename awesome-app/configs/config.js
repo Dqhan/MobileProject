@@ -1,4 +1,5 @@
 const path = require('path');
+// const ROOT = path.resolve(__dirname, '..', 'dist');
 const ROOT = path.resolve(__dirname, '..');
 const ip = require('ip').address();
 const config = {
@@ -51,7 +52,7 @@ const config = {
       devScripts: `
       <!-- 引入 Vue 和 Vant 的 JS 文件 -->
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" rel="external nofollow" ></script>
-      <script src="https://cdn.jsdelivr.net/npm/vant@2.4/lib/vant.min.js" rel="external nofollow" ></script>
+      <script src="http://localhost:8080/mobile-lib-bundle.js" ></script>
         <script>
           window.addEventListener('load', function () {
             var is_touch_device = function () {

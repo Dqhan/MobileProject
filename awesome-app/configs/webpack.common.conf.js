@@ -117,8 +117,7 @@ const webConfig = {
    */
   module: {
     // webpack 2.0 
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         use: [{
           loader: 'babel-loader'
@@ -127,16 +126,66 @@ const webConfig = {
       },
       {
         test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ],
+        // use: ExtractTextPlugin.extract({
+        //   fallback: "style-loader",
+        //   use: "css-loader",
+        // }),
+        exclude: config.excludeModuleReg
+      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader'
+      //   ]
+      // },
+      {
+        test: /\.less$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: "css-loader"
-        })
+          use: [
+            'css-loader',
+            "less-loader"
+          ]
+        }),
+        exclude: config.excludeModuleReg
+        // test: /\.less$/,
+        // use: [
+        //   'style-loader',
+        //   'css-loader',
+        //   'less-loader'
+        // ],
+        // exclude: config.excludeModuleReg
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
+        use: [{
+          loader: 'url-loader'
+        }],
+        exclude: config.excludeModuleReg
+      },
+      // {
+      //   test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,
+      //   use: [{
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: '1024'
+      //     }
+      //   }],
+      //   exclude: config.excludeModuleReg
+      // },
       {
         test: /\.vue(\?[^?]+)?$/,
         use: [{
           loader: 'vue-loader',
-          options: Object.assign(vueLoaderConfig({useVue: true, usePostCSS: false}), {
+          options: Object.assign(vueLoaderConfig({
+            useVue: true,
+            usePostCSS: false
+          }), {
             /**
              * important! should use postTransformNode to add $processStyle for
              * inline style prefixing.
@@ -155,28 +204,17 @@ const webConfig = {
                 minPixelValue: 1.01
               })
             ],
-            compilerModules: [
-              {
-                postTransformNode: el => {
-                  // to convert vnode for weex components.
-                  require('weex-vue-precompiler')()(el)
-                }
+            compilerModules: [{
+              postTransformNode: el => {
+                // to convert vnode for weex components.
+                require('weex-vue-precompiler')()(el)
               }
-            ]
-            
+            }]
+
           })
         }],
         exclude: config.excludeModuleReg
-      },
-      // {
-      //   test: /\.(less|css)$/,
-      //   use: [
-      //       MiniCssExtractPlugin.loader,
-      //       'css-loader',
-      //       'less-loader',
-      //   ],
-      //   exclude: config.excludeModuleReg
-      // }
+      }
     ]
   },
   /*
@@ -209,8 +247,7 @@ const weexConfig = {
    * See: http://webpack.github.io/docs/configuration.html#module
    */
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         use: [{
           loader: 'babel-loader'
@@ -221,7 +258,9 @@ const weexConfig = {
         test: /\.vue(\?[^?]+)?$/,
         use: [{
           loader: 'weex-loader',
-          options: vueLoaderConfig({useVue: false})
+          options: vueLoaderConfig({
+            useVue: false
+          })
         }],
         exclude: config.excludeModuleReg
       }
@@ -234,11 +273,11 @@ const weexConfig = {
    */
   plugins: plugins,
   /*
-  * Include polyfills or mocks for various node stuff
-  * Description: Node configuration
-  *
-  * See: https://webpack.github.io/docs/configuration.html#node
-  */
+   * Include polyfills or mocks for various node stuff
+   * Description: Node configuration
+   *
+   * See: https://webpack.github.io/docs/configuration.html#node
+   */
   node: config.nodeConfiguration
 };
 

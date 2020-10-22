@@ -1,15 +1,25 @@
 /*global Vue*/
-
+/* weex initialized here, please do not move this line */
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
-console.log(Vant)
-
+require('../content/index.less');
 Vue.use(Vant);
-/* weex initialized here, please do not move this line */
-const { router } = require('./router');
+
+
+const component = window["aui-library"];
+
+Vue.component('aui-button', component.AuiButton)
+Vue.component('aui-table', component.AuiTable)
+
+
+const {
+    router
+} = require('./router');
 const App = require('@/index.vue');
 /* eslint-disable no-new */
-new Vue(Vue.util.extend({el: '#root', router}, App));
+new Vue(Vue.util.extend({
+    el: '#root',
+    router
+}, App));
 
 router.push('/');

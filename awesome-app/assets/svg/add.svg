@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="228px" height="229px" viewBox="0 0 228 229" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>add</title>
+    <defs>
+        <filter x="-85.7%" y="-85.7%" width="271.4%" height="271.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="24" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="-13.5923048%" y1="-19.3559157%" x2="79.3268886%" y2="90.7965409%" id="linearGradient-2">
+            <stop stop-color="#1857BD" offset="0%"></stop>
+            <stop stop-color="#0C3A84" offset="100%"></stop>
+        </linearGradient>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="page1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Step3.1_piaoju_wodefeiyong" transform="translate(-846.000000, -1955.000000)">
+            <g id="add" transform="translate(875.000000, 1973.000000)">
+                <circle id="椭圆形" fill="#0C3A84" filter="url(#filter-1)" cx="85" cy="96.4606742" r="42"></circle>
+                <circle id="椭圆形" fill="url(#linearGradient-2)" cx="85" cy="85" r="85"></circle>
+                <rect id="矩形" fill="#FFFFFF" filter="url(#filter-3)" x="42.9775281" y="81.1797753" width="84.0449438" height="8.59550562" rx="2"></rect>
+                <path d="M44.9775281,80.2247191 L125.022472,80.2247191 C126.127041,80.2247191 127.022472,81.1201496 127.022472,82.2247191 L127.022472,86.8202247 C127.022472,87.9247942 126.127041,88.8202247 125.022472,88.8202247 L44.9775281,88.8202247 C43.8729586,88.8202247 42.9775281,87.9247942 42.9775281,86.8202247 L42.9775281,82.2247191 C42.9775281,81.1201496 43.8729586,80.2247191 44.9775281,80.2247191 Z" id="矩形" fill="#FFFFFF" filter="url(#filter-4)" transform="translate(85.000000, 84.522472) rotate(-270.000000) translate(-85.000000, -84.522472) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
