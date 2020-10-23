@@ -126,23 +126,12 @@ const webConfig = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ],
-        // use: ExtractTextPlugin.extract({
-        //   fallback: "style-loader",
-        //   use: "css-loader",
-        // }),
-        exclude: config.excludeModuleReg
+        use: ['style-loader', 'css-loader'],
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader",
+        })
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     'style-loader',
-      //     'css-loader'
-      //   ]
-      // },
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
@@ -151,15 +140,7 @@ const webConfig = {
             'css-loader',
             "less-loader"
           ]
-        }),
-        exclude: config.excludeModuleReg
-        // test: /\.less$/,
-        // use: [
-        //   'style-loader',
-        //   'css-loader',
-        //   'less-loader'
-        // ],
-        // exclude: config.excludeModuleReg
+        })
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|ttf|woff|eot)$/,

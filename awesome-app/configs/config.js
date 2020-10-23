@@ -64,6 +64,8 @@ const config = {
                 window.phantomLimb.stop()
               }
             }
+            var scale = $('body').width() / 640;
+            $('html').css('font-size', 100 * scale + 'px');
           })
         </script>
         `
