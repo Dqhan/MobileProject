@@ -28,7 +28,7 @@ const config = {
       aggregateTimeout: 300,
       poll: false
     },
-        /**
+    /**
      * Source Maps
      */
     // https://webpack.js.org/configuration/devtool/#development
@@ -50,24 +50,16 @@ const config = {
     notifyOnErrors: true,
     htmlOptions: {
       devScripts: `
+      <script>
+          window.addEventListener('load', function () {
+            var scale = 1 / devicePixelRatio;
+            document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 1125 * 100 + 'px';
+          })
+        </script>
       <!-- 引入 Vue 和 Vant 的 JS 文件 -->
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" rel="external nofollow" ></script>
       <script src="http://localhost:8080/mobile-lib-bundle.js" ></script>
-        <script>
-          window.addEventListener('load', function () {
-            var is_touch_device = function () {
-              return 'ontouchstart' in window // works on most browsers
-                  || 'onmsgesturechange' in window; // works on ie10
-            };
-            if(!is_touch_device()) {
-              if (window.parent === window) { // not in iframe.
-                window.phantomLimb.stop()
-              }
-            }
-            var scale = $('body').width() / 640;
-            $('html').css('font-size', 100 * scale + 'px');
-          })
-        </script>
         `
     }
   },

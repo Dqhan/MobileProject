@@ -1,6 +1,12 @@
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
 .banner {
     background-image: url('/assets/image/banner.png');
     background-size: cover;
-    width: 640px;
-    height: 100px;
+    .px2rem(width,
+    1125);
+    .px2rem(height,
+    541);
 }
