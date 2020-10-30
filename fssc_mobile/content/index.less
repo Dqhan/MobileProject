@@ -1,0 +1,14 @@
+@baseFontSize: 112.5;
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+.item-container {
+    .px2rem(width, 1125);
+    background-color: #f2f3f4;
+    align-items: center;
+    justify-content: center;
+}
+
+@import "./common.less";
+@import "./home.less";

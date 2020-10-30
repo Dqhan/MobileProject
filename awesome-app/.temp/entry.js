@@ -6,7 +6,11 @@ weex.init(Vue)
 import Vant from 'vant';
 import 'vant/lib/index.css';
 require('../content/index.less');
+
+
 Vue.use(Vant);
+weex.init(Vue);
+
 
 // const component = window["aui-library"];
 // Vue.component('aui-button', component.AuiButton)

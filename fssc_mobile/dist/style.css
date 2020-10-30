@@ -1,0 +1,14 @@
+// { "framework": "Vue"} 
+
+.item-container {
+  width: 10rem;
+  background-color: #f2f3f4;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  background-image: url('/assets/image/banner.png');
+  background-size: cover;
+  width: 10rem;
+  height: 4.80888889rem;
+}
