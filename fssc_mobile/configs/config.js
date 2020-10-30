@@ -67,7 +67,6 @@ const config = {
         </script>
         <!-- 引入 Vue 和 Vant 的 JS 文件 -->
         <script src="system.js"></script>
-        <script src="http://192.168.1.4:8083/mobile-lib-bundle.js"></script>
         `
     }
   },

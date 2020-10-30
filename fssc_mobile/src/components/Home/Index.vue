@@ -17,6 +17,7 @@
         :date="num.date"
         :type="num.type"
         :status="num.status"
+        :color="num.color"
       ></aui-cell>
     </aui-list>
   </div>
@@ -31,44 +32,57 @@ export default {
       btnList: [
         {
           text: "添加费用",
-          className: "home-btn"
+          className: "home-btn",
+          src: "./add_receipt.png",
         },
         {
           text: "提单据",
-          className: "home-btn"
+          className: "home-btn",
+          src: "./add_cost.png",
         },
         {
           text: "发票识别",
-          className: "home-btn"
-        }
+          className: "home-btn",
+          src: "./add_invoice.png",
+        },
       ],
       accuracy: 100,
       scrollbar: false,
       lists: [
         {
           status: "王玉审批中",
-          text: "预付款第三方项目款项",
+          text: "预付款第三方项目款项aaa",
           type: "借款申请",
-          date: new Date()
+          date: new Date().toDateString(),
+          color: "blue",
         },
         {
-          status: "peter审批中",
-          text: "预付款第三方项目款项",
+          status: "peter已驳回",
+          text: "预付款第三方项目款项ccc",
           type: "借款申请",
-          date: new Date()
+          date: new Date().toDateString(),
+          color: "red",
         },
         {
-          status: "dqhan审批中",
-          text: "预付款第三方项目款项",
+          status: "dqhan已完成",
+          text: "预付款第三方项目款项ddd",
           type: "借款申请",
-          date: new Date()
-        }
-      ]
+          date: new Date().toDateString(),
+          color: "green",
+        },
+        {
+          status: "666审批中",
+          text: "预付款第三方项目款项sss",
+          type: "借款申请",
+          date: new Date().toDateString(),
+          color: "blue",
+        },
+      ],
     };
   },
   methods: {
     handleLoadMore(e) {},
-    handleScroll(e) {}
-  }
+    handleScroll(e) {},
+  },
 };
 </script>

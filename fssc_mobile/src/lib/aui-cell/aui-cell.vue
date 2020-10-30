@@ -1,23 +1,26 @@
 <script>
-require("./style.less");
 export default {
   name: "aui-cell",
   props: {
     status: {
       type: String,
-      default: ""
+      default: "",
     },
     text: {
       type: String,
-      default: ""
+      default: "",
     },
     type: {
       type: String,
-      default: ""
+      default: "",
     },
     date: {
-      type: Date,
-      default: new Date()
+      type: String,
+      default: "",
+    },
+    color: {
+      type: String,
+      default: "",
     },
   },
 
@@ -37,7 +40,7 @@ export default {
       return createElement(
         "text",
         {
-          class: "aui-cell-item aui-cell-status"
+          class: "aui-cell-item",
         },
         this.status
       );
@@ -46,7 +49,7 @@ export default {
       return createElement(
         "text",
         {
-          class: "aui-cell-item aui-cell-text"
+          class: "aui-cell-item aui-cell-text",
         },
         this.text
       );
@@ -55,7 +58,7 @@ export default {
       return createElement(
         "text",
         {
-          class: "aui-cell-item aui-cell-type"
+          class: "aui-cell-item aui-cell-type",
         },
         this.type
       );
@@ -64,29 +67,34 @@ export default {
       return createElement(
         "text",
         {
-          class: "aui-cell-item aui-cell-date"
+          class: "aui-cell-item aui-cell-date",
         },
-        this.date.toString()
+        this.date
       );
-    }
+    },
   },
 
   render(createElement) {
     let { key, onClick } = this;
+    let baseClass = "aui-cell";
+    if (this.color === "red")
+      baseClass = baseClass.concat(" aui-cell-status-red");
+    if (this.color === "blue")
+      baseClass = baseClass.concat(" aui-cell-status-blue");
+    if (this.color === "green")
+      baseClass = baseClass.concat(" aui-cell-status-green");
     return createElement(
       "cell",
       {
-        class: "aui-cell",
-        props: {
-          
-        },
+        class: baseClass,
+        props: {},
         on: {
-          onClick: onClick
+          onClick: onClick,
         },
-        key: key
+        key: key,
       },
       this.renderCellContent(createElement)
     );
-  }
+  },
 };
 </script>

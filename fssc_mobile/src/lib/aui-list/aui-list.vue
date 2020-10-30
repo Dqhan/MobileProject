@@ -1,5 +1,5 @@
 <script>
-require("./style.less");
+
 export default {
   name: "aui-list",
   props: {

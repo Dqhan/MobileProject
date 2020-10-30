@@ -3,40 +3,52 @@ import { WxcTabBar } from "weex-ui";
 export default {
   name: "aui-tabBar",
   components: {
-    WxcTabBar
+    WxcTabBar,
   },
   props: {
+    className: {
+      type: String,
+      default: "",
+    },
     tabs: {
       type: Array,
-      default: []
+      default: [],
     },
     titleType: {
       type: "",
-      default: ""
-    }
+      default: "",
+    },
   },
 
   methods: {
     onChange(e) {
       this.$emit("handleChange", e);
-    }
+    },
   },
 
   render(createElement) {
-    let { tabs, onChange, titleType } = this;
+    let { tabs, onChange, titleType, className } = this;
     return createElement(
-      "wxc-tab-bar",
+      "div",
       {
-        props: {
-          "tab-titles": tabs,
-          "title-type": titleType
-        },
-        on: {
-          wxcTabBarCurrentTabSelected: onChange
-        }
+        class: `aui-tabBar ${className}`,
       },
-      this.$slots.default
+      [
+        createElement(
+          "wxc-tab-bar",
+          {
+            props: {
+              "tab-titles": tabs,
+              "title-type": titleType,
+            },
+            on: {
+              wxcTabBarCurrentTabSelected: onChange,
+            },
+          },
+          this.$slots.default
+        ),
+      ]
     );
-  }
+  },
 };
 </script>

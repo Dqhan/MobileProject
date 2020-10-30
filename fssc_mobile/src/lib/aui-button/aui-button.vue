@@ -1,5 +1,5 @@
 <script>
-require("./style.less");
+
 import { WxcButton } from "weex-ui";
 export default {
   name: "aui-button",
@@ -36,6 +36,10 @@ export default {
     size: {
       type: String,
       default: "small"
+    },
+    src: {
+      type:String,
+      default: ""
     }
   },
 
@@ -46,17 +50,17 @@ export default {
   },
 
   render(createElement) {
-    let { text, type, disabled, onClick, size, className } = this;
+    let { text, type, disabled, onClick, size, className,src } = this;
     return createElement(
       "div",
       {
-        class: `aui-button ${className}`
+        class: `aui-button weex-ct weex-div ${className}`
       },
       [
         createElement("image", {
           class: "aui-button-icon",
           attrs: {
-            src: "./add_cost.png"
+            src: src
           }
         }),
         createElement("wxc-button", {

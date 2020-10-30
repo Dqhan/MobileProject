@@ -3224,7 +3224,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\components\\Index.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\components\\Index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -3334,7 +3334,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\components\\Home\\Index.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\components\\Home\\Index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-176d4505"
@@ -3393,37 +3393,50 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 exports.default = {
   data: function data() {
     return {
       btnList: [{
         text: "添加费用",
-        className: "home-btn"
+        className: "home-btn",
+        src: "./add_receipt.png"
       }, {
         text: "提单据",
-        className: "home-btn"
+        className: "home-btn",
+        src: "./add_cost.png"
       }, {
         text: "发票识别",
-        className: "home-btn"
+        className: "home-btn",
+        src: "./add_invoice.png"
       }],
       accuracy: 100,
       scrollbar: false,
       lists: [{
         status: "王玉审批中",
-        text: "预付款第三方项目款项",
+        text: "预付款第三方项目款项aaa",
         type: "借款申请",
-        date: new Date()
+        date: new Date().toDateString(),
+        color: "blue"
       }, {
-        status: "peter审批中",
-        text: "预付款第三方项目款项",
+        status: "peter已驳回",
+        text: "预付款第三方项目款项ccc",
         type: "借款申请",
-        date: new Date()
+        date: new Date().toDateString(),
+        color: "red"
       }, {
-        status: "dqhan审批中",
-        text: "预付款第三方项目款项",
+        status: "dqhan已完成",
+        text: "预付款第三方项目款项ddd",
         type: "借款申请",
-        date: new Date()
+        date: new Date().toDateString(),
+        color: "green"
+      }, {
+        status: "666审批中",
+        text: "预付款第三方项目款项sss",
+        type: "借款申请",
+        date: new Date().toDateString(),
+        color: "blue"
       }]
     };
   },
@@ -3464,7 +3477,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "text": num.text,
         "date": num.date,
         "type": num.type,
-        "status": num.status
+        "status": num.status,
+        "color": num.color
       }
     })
   }))], 1)
@@ -3507,7 +3521,7 @@ var __vue_styles__ = []
 __vue_exports__ = __webpack_require__(12)
 
 /* template */
-var __vue_template__ = __webpack_require__(43)
+var __vue_template__ = __webpack_require__(41)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -3519,7 +3533,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\index.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -3545,33 +3559,6 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _vue = __webpack_require__(13);
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _auiTabBar = __webpack_require__(14);
-
-var _auiTabBar2 = _interopRequireDefault(_auiTabBar);
-
-var _auiCell = __webpack_require__(25);
-
-var _auiCell2 = _interopRequireDefault(_auiCell);
-
-var _auiList = __webpack_require__(28);
-
-var _auiList2 = _interopRequireDefault(_auiList);
-
-var _auiButton = __webpack_require__(31);
-
-var _auiButton2 = _interopRequireDefault(_auiButton);
-
-var _auiBtnGroup = __webpack_require__(40);
-
-var _auiBtnGroup2 = _interopRequireDefault(_auiBtnGroup);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 //
 //
 //
@@ -3579,11 +3566,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 
-_vue2.default.component("aui-tabBar", _auiTabBar2.default);
-_vue2.default.component("aui-cell", _auiCell2.default);
-_vue2.default.component("aui-list", _auiList2.default);
-_vue2.default.component("aui-button", _auiButton2.default);
-_vue2.default.component("aui-btnGroup", _auiBtnGroup2.default);
+__webpack_require__(13);
 
 exports.default = {
   name: "App",
@@ -3594,6 +3577,47 @@ exports.default = {
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _vue = __webpack_require__(14);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+var _auiTabBar = __webpack_require__(15);
+
+var _auiTabBar2 = _interopRequireDefault(_auiTabBar);
+
+var _auiCell = __webpack_require__(26);
+
+var _auiCell2 = _interopRequireDefault(_auiCell);
+
+var _auiList = __webpack_require__(28);
+
+var _auiList2 = _interopRequireDefault(_auiList);
+
+var _auiButton = __webpack_require__(30);
+
+var _auiButton2 = _interopRequireDefault(_auiButton);
+
+var _auiBtnGroup = __webpack_require__(38);
+
+var _auiBtnGroup2 = _interopRequireDefault(_auiBtnGroup);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+__webpack_require__(40);
+
+_vue2.default.component("aui-tabBar", _auiTabBar2.default);
+_vue2.default.component("aui-cell", _auiCell2.default);
+_vue2.default.component("aui-list", _auiList2.default);
+_vue2.default.component("aui-button", _auiButton2.default);
+_vue2.default.component("aui-btnGroup", _auiBtnGroup2.default);
+
+/***/ }),
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12049,14 +12073,14 @@ if (inBrowser) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(15)
+__vue_exports__ = __webpack_require__(16)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -12068,7 +12092,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\lib\\aui-tabBar\\aui-tabBar.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\lib\\aui-tabBar\\aui-tabBar.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -12083,7 +12107,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12093,7 +12117,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _wxcTabBar = __webpack_require__(16);
+var _wxcTabBar = __webpack_require__(17);
 
 var _wxcTabBar2 = _interopRequireDefault(_wxcTabBar);
 
@@ -12105,6 +12129,10 @@ exports.default = {
     WxcTabBar: _wxcTabBar2.default
   },
   props: {
+    className: {
+      type: String,
+      default: ""
+    },
     tabs: {
       type: Array,
       default: []
@@ -12124,9 +12152,12 @@ exports.default = {
   render: function render(createElement) {
     var tabs = this.tabs,
         onChange = this.onChange,
-        titleType = this.titleType;
+        titleType = this.titleType,
+        className = this.className;
 
-    return createElement("wxc-tab-bar", {
+    return createElement("div", {
+      class: "aui-tabBar " + className
+    }, [createElement("wxc-tab-bar", {
       props: {
         "tab-titles": tabs,
         "title-type": titleType
@@ -12134,12 +12165,12 @@ exports.default = {
       on: {
         wxcTabBarCurrentTabSelected: onChange
       }
-    }, this.$slots.default);
+    }, this.$slots.default)]);
   }
 };
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12149,7 +12180,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(17);
+var _index = __webpack_require__(18);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -12161,21 +12192,21 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(18)
+__vue_styles__.push(__webpack_require__(19)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(19)
+__vue_exports__ = __webpack_require__(20)
 
 /* template */
-var __vue_template__ = __webpack_require__(24)
+var __vue_template__ = __webpack_require__(25)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -12187,10 +12218,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\node_modules\\weex-ui\\packages\\wxc-tab-bar\\index.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\node_modules\\_weex-ui@0.8.5@weex-ui\\packages\\wxc-tab-bar\\index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-dc8303b2"
+__vue_options__._scopeId = "data-v-195854e6"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -12205,7 +12236,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -12272,7 +12303,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12282,7 +12313,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(20);
+var _utils = __webpack_require__(21);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -12576,7 +12607,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12605,7 +12636,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
                                                                                                                                                                                                                                                                                 * under the License.
                                                                                                                                                                                                                                                                                 */
 
-var _urlParse = __webpack_require__(21);
+var _urlParse = __webpack_require__(22);
 
 var _urlParse2 = _interopRequireDefault(_urlParse);
 
@@ -12939,14 +12970,14 @@ var Utils = {
 exports.default = Utils;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var required = __webpack_require__(22)
-  , qs = __webpack_require__(23)
+var required = __webpack_require__(23)
+  , qs = __webpack_require__(24)
   , slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//
   , protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\S\s]*)/i
   , whitespace = '[\\x09\\x0A\\x0B\\x0C\\x0D\\x20\\xA0\\u1680\\u180E\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\\u205F\\u3000\\u2028\\u2029\\uFEFF]'
@@ -13396,7 +13427,7 @@ module.exports = Url;
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13441,7 +13472,7 @@ module.exports = function required(port, protocol) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13566,7 +13597,7 @@ exports.parse = querystring;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13644,14 +13675,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(26)
+__vue_exports__ = __webpack_require__(27)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -13663,7 +13694,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\lib\\aui-cell\\aui-cell.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\lib\\aui-cell\\aui-cell.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -13678,7 +13709,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13687,8 +13718,6 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-__webpack_require__(27);
 exports.default = {
   name: "aui-cell",
   props: {
@@ -13705,8 +13734,12 @@ exports.default = {
       default: ""
     },
     date: {
-      type: Date,
-      default: new Date()
+      type: String,
+      default: ""
+    },
+    color: {
+      type: String,
+      default: ""
     }
   },
 
@@ -13724,7 +13757,7 @@ exports.default = {
     },
     renderCellStatus: function renderCellStatus(createElement) {
       return createElement("text", {
-        class: "aui-cell-item aui-cell-status"
+        class: "aui-cell-item"
       }, this.status);
     },
     renderCellText: function renderCellText(createElement) {
@@ -13740,7 +13773,7 @@ exports.default = {
     renderCellDate: function renderCellDate(createElement) {
       return createElement("text", {
         class: "aui-cell-item aui-cell-date"
-      }, this.date.toString());
+      }, this.date);
     }
   },
 
@@ -13748,8 +13781,12 @@ exports.default = {
     var key = this.key,
         onClick = this.onClick;
 
+    var baseClass = "aui-cell";
+    if (this.color === "red") baseClass = baseClass.concat(" aui-cell-status-red");
+    if (this.color === "blue") baseClass = baseClass.concat(" aui-cell-status-blue");
+    if (this.color === "green") baseClass = baseClass.concat(" aui-cell-status-green");
     return createElement("cell", {
-      class: "aui-cell",
+      class: baseClass,
       props: {},
       on: {
         onClick: onClick
@@ -13758,12 +13795,6 @@ exports.default = {
     }, this.renderCellContent(createElement));
   }
 };
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .aui-cell {\r\n|     padding: 20px 10px;\r\n|     .aui-cell-item{\r");
 
 /***/ }),
 /* 28 */
@@ -13785,7 +13816,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\lib\\aui-list\\aui-list.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\lib\\aui-list\\aui-list.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -13809,8 +13840,6 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-__webpack_require__(30);
 exports.default = {
   name: "aui-list",
   props: {
@@ -13881,19 +13910,13 @@ exports.default = {
 
 /***/ }),
 /* 30 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .aui-list {\r\n|     background-color: #ffffff;\r\n|     .aui-list-title {\r");
-
-/***/ }),
-/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(32)
+__vue_exports__ = __webpack_require__(31)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -13905,7 +13928,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\lib\\aui-button\\aui-button.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\lib\\aui-button\\aui-button.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -13920,7 +13943,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13930,13 +13953,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _wxcButton = __webpack_require__(33);
+var _wxcButton = __webpack_require__(32);
 
 var _wxcButton2 = _interopRequireDefault(_wxcButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(39);
 exports.default = {
   name: "aui-button",
   components: { WxcButton: _wxcButton2.default },
@@ -13972,6 +13994,10 @@ exports.default = {
     size: {
       type: String,
       default: "small"
+    },
+    src: {
+      type: String,
+      default: ""
     }
   },
 
@@ -13987,14 +14013,15 @@ exports.default = {
         disabled = this.disabled,
         onClick = this.onClick,
         size = this.size,
-        className = this.className;
+        className = this.className,
+        src = this.src;
 
     return createElement("div", {
-      class: "aui-button " + className
+      class: "aui-button weex-ct weex-div " + className
     }, [createElement("image", {
       class: "aui-button-icon",
       attrs: {
-        src: "./add_cost.png"
+        src: src
       }
     }), createElement("wxc-button", {
       props: {
@@ -14011,7 +14038,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14021,7 +14048,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(34);
+var _index = __webpack_require__(33);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -14033,21 +14060,21 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(35)
+__vue_styles__.push(__webpack_require__(34)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(36)
+__vue_exports__ = __webpack_require__(35)
 
 /* template */
-var __vue_template__ = __webpack_require__(38)
+var __vue_template__ = __webpack_require__(37)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -14059,10 +14086,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\node_modules\\weex-ui\\packages\\wxc-button\\index.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\node_modules\\_weex-ui@0.8.5@weex-ui\\packages\\wxc-button\\index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-77c133fc"
+__vue_options__._scopeId = "data-v-6c6e89dc"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -14077,7 +14104,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -14098,7 +14125,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14139,7 +14166,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
-var _type = __webpack_require__(37);
+var _type = __webpack_require__(36);
 
 exports.default = {
   props: {
@@ -14208,7 +14235,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14290,7 +14317,7 @@ var TEXT_FONTSIZE_STYLE_MAP = exports.TEXT_FONTSIZE_STYLE_MAP = {
 };
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14312,20 +14339,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .aui-button {\r\n|     div {\r\n|         width: auto !important;\r");
-
-/***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* script */
-__vue_exports__ = __webpack_require__(41)
+__vue_exports__ = __webpack_require__(39)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -14337,7 +14358,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\code\\NewMobileProject\\fssc_mobile\\src\\lib\\aui-btnGroup\\aui-btnGroup.vue"
+__vue_options__.__file = "C:\\code\\MobileProject\\fssc_mobile\\src\\lib\\aui-btnGroup\\aui-btnGroup.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -14352,7 +14373,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14361,8 +14382,6 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-__webpack_require__(42);
 exports.default = {
   name: "aui-btnGroup",
   props: {
@@ -14401,6 +14420,9 @@ exports.default = {
         btnItem.size !== void 0 && Object.assign(baseProps.props, {
           size: btnItem.size
         });
+        btnItem.src !== void 0 && Object.assign(baseProps.props, {
+          src: btnItem.src
+        });
         return createElement("aui-button", baseProps);
       });
     }
@@ -14414,13 +14436,13 @@ exports.default = {
 };
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .aui-btnGroup {\r\n|     display: flex;\r\n|     flex-direction: row;\r");
+throw new Error("Module parse failed: Unexpected character '@' (1:0)\nYou may need an appropriate loader to handle this file type.\n| @baseFontSize: 112.5;\r\n| \r\n| @import \"./aui-button/style.less\";\r");
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
