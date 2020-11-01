@@ -1,0 +1,26 @@
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+.aui-fssc-filter {
+    background-color: #ffffff;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    .aui-fssc-filter-content {
+        display: flex;
+        border: 1px solid #131D2C;
+        .px2rem(width, 1045);
+        .aui-fssc-filter-item {
+            flex: 1;
+            border-right: 1px solid #131D2C;
+            &:nth-child(1) {
+                // .px2rem(border-left-radius, 20)
+            }
+            &:nth-last-child(1) {
+                border-right: 0px;
+            }
+        }
+        .px2rem(border-radius, 20)
+    }
+}

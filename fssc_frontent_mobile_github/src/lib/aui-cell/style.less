@@ -1,0 +1,72 @@
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+.aui-cell-status-red {
+    &:before {
+        content: "\2022";
+        .px2rem(font-size, 80);
+        position: absolute;
+        top: 0;
+        color: #D62020
+    }
+}
+
+.aui-cell-status-blue {
+    &:before {
+        content: "\2022";
+        .px2rem(font-size, 80);
+        position: absolute;
+        top: 0;
+        color: #007AFF
+    }
+}
+
+.aui-cell-status-green {
+    &:before {
+        content: "\2022";
+        .px2rem(font-size, 80);
+        position: absolute;
+        top: 0;
+        color: #4BCC08
+    }
+}
+
+.aui-cell {
+    background-color: #ffffff;
+    .px2rem(padding-top, 32);
+    .px2rem(padding-right, 10);
+    .px2rem(padding-left, 10);
+    .px2rem(padding-bottom, 32);
+    position: relative;
+    .aui-cell-item {
+        position: relative;
+        .px2rem(font-size, 36);
+        .px2rem(padding-top, 0);
+        .px2rem(padding-bottom, 20);
+        .px2rem(padding-right, 40);
+        .px2rem(padding-left, 40);
+    }
+    .aui-cell-text {
+        .aui-cell-text-contain {
+            width: 80%;
+            font-weight: bold;
+            .px2rem(font-size, 40);
+        }
+        .aui-cell-text-mount {
+            position: absolute;
+            .px2rem(right, 40);
+            font-weight: bold;
+            .px2rem(font-size, 40);
+            top: 0
+        }
+    }
+    .aui-cell-type {
+        display: inline-block;
+        ;
+    }
+    .aui-cell-date {
+        display: inline-block;
+        ;
+    }
+}

@@ -1,0 +1,16 @@
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+.home-list {
+    background-color: #ffffff;
+    .px2rem(margin, 25);
+    .px2rem(padding, 20);
+}
+
+.home-btnGroup {
+    .px2rem(margin-top, 25);
+    .px2rem(margin-right, 25);
+    .px2rem(margin-left, 25);
+    .px2rem(padding, 25);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="68px" viewBox="0 0 65 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>receipt_selected</title>
+    <g id="page1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-729.000000, -659.000000)" fill-rule="nonzero">
+            <g id="receipt_selected" transform="translate(729.000000, 659.000000)">
+                <path d="M61.1315789,0 L3.86842108,0 C2.00809349,0 0.5,1.49983509 0.5,3.34997544 L0.5,63.6495329 C0.5,65.4987193 2.09326313,66.9995083 3.95263155,66.9995083 C4.64746615,66.9990675 61.5705143,67.1951595 62.6848929,66.6191939 C63.7992715,66.0432283 64.4989262,64.898537 64.5,63.6495329 L64.5,3.34997544 C64.5,1.49983509 62.9919065,0 61.1315789,0 Z" id="形状" fill="#0C3A84"></path>
+                <path d="M15.5,26 L15.5,19 L48.5,19 L48.5,26 L15.5,26 Z M15.5,40 L15.5,33 L37.5,33 L37.5,40 L15.5,40 Z" id="形状" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

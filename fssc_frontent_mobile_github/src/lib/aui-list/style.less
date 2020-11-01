@@ -1,0 +1,11 @@
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize * 1rem;
+}
+
+.aui-list {
+    .aui-list-title {
+        padding: 15px;
+        font-weight: bold !important;
+        .px2rem(font-size, 48) !important;
+    }
+}
